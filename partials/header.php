@@ -1,14 +1,4 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css?<?php echo time(); ?>">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-  <body>
-  <header class="bg-white p-4 shadow-md">
+<header class="bg-white p-4 shadow-md">
   <div class="mx-auto max-w-screen-xxl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="md:flex md:items-center md:gap-12">
@@ -26,17 +16,17 @@
         <div class="sm:flex sm:gap-4">
           <a
             class="rounded-md bg-slate-950 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
-            href="#"
+            href="./views/auth/signin.php"
           >
-            Login
+            Sign In
           </a>
 
           <div class="hidden sm:flex">
             <a
               class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600"
-              href="#"
+              href="./views/auth/signin.php"
             >
-              Register
+              Sign Up
             </a>
           </div>
         </div>

@@ -13,10 +13,10 @@
       <div class="mt-4 mb-2 font-medium xl:mb-4">Guides</div>
       <nav aria-label="Guides Navigation" class="text-gray-500">
         <ul class="space-y-3">
-          <li><a class="hover:text-blue-600 hover:underline" href="#">How to make a footer</a></li>
-          <li><a class="hover:text-blue-600 hover:underline" href="#">Designing your app</a></li>
-          <li><a class="hover:text-blue-600 hover:underline" href="#">Getting help from the community</a></li>
-          <li><a class="hover:text-blue-600 hover:underline" href="#">Pricing vs Hourly Rate</a></li>
+          <li><a class="hover:text-blue-600 hover:underline" href="#">How to Rent</a></li>
+          <li><a class="hover:text-blue-600 hover:underline" href="#">How to message property owner</a></li>
+          <li><a class="hover:text-blue-600 hover:underline" href="#">How to Crete properties</a></li>
+          <li><a class="hover:text-blue-600 hover:underline" href="#">How to property owner</a></li>
         </ul>
       </nav>
     </div>
@@ -26,7 +26,6 @@
         <ul class="space-y-3">
           <li><a class="hover:text-blue-600 hover:underline" href="#">Home</a></li>
           <li><a class="hover:text-blue-600 hover:underline" href="#">About</a></li>
-          <li><a class="hover:text-blue-600 hover:underline" href="#">Guest Favorites</a></li>
           <li><a class="hover:text-blue-600 hover:underline" href="#">Contact</a></li>
         </ul>
       </nav>
@@ -51,54 +50,6 @@
     </div>
   </div>
 </footer>
-
-    <script>
-  const list = document.getElementById('category-list');
-  let isMouseDown = false;
-  let startX;
-  let scrollLeft;
-
-  list.addEventListener('mousedown', (e) => {
-    isMouseDown = true;
-    startX = e.pageX - list.offsetLeft;
-    scrollLeft = list.scrollLeft;
-  });
-
-  list.addEventListener('mouseleave', () => {
-    isMouseDown = false;
-  });
-
-  list.addEventListener('mouseup', () => {
-    isMouseDown = false;
-  });
-
-  list.addEventListener('mousemove', (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.pageX - list.offsetLeft;
-    const walk = (x - startX) * 3; // scroll-fast speed (higher number = faster)
-    list.scrollLeft = scrollLeft - walk;
-  });
-
-  // Mobile touch support
-  list.addEventListener('touchstart', (e) => {
-    isMouseDown = true;
-    startX = e.touches[0].pageX - list.offsetLeft;
-    scrollLeft = list.scrollLeft;
-  });
-
-  list.addEventListener('touchend', () => {
-    isMouseDown = false;
-  });
-
-  list.addEventListener('touchmove', (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - list.offsetLeft;
-    const walk = (x - startX) * 3; // scroll-fast speed (higher number = faster)
-    list.scrollLeft = scrollLeft - walk;
-  });
-</script>
-
+<script src="./js/util.js"></script>
 </body>
 </html>
