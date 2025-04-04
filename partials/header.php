@@ -1,3 +1,4 @@
+<?php session_start();?>
 <header class="bg-white p-4 shadow-md">
   <div class="mx-auto max-w-screen-xxl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
@@ -13,24 +14,36 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <div class="sm:flex sm:gap-4">
-          <a
-            class="rounded-md bg-slate-950 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
-            href="./views/auth/signin.php"
-          >
-            Sign In
-          </a>
-
-          <div class="hidden sm:flex">
+        <?php 
+             if (!isset($_SESSION['user_id']) ):
+        ?>
+          <div class="sm:flex sm:gap-4">
             <a
-              class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600"
+              class="rounded-md bg-slate-950 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
               href="./views/auth/signin.php"
             >
-              Sign Up
+              Sign In
             </a>
-          </div>
-        </div>
 
+            <div class="hidden sm:flex">
+              <a
+                class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600"
+                href="./views/auth/signup.php"
+              >
+                Sign Up
+              </a>
+            </div>
+          </div>
+        <?php else: ?>
+          <div class="hidden sm:flex">
+              <a
+                class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600"
+                href="./logout.php"
+              >
+                Logout
+              </a>
+            </div>
+        <?php endif; ?>
         <div class="block md:hidden">
           <button
             class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"

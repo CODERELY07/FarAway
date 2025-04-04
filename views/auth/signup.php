@@ -21,25 +21,29 @@
       <div class="relative mt-8 flex h-px place-items-center bg-gray-200">
         <div class="absolute left-1/2 h-6 -translate-x-1/2 bg-white px-4 text-center text-sm text-gray-500">Or use email instead</div>
       </div>
-      <form class="flex flex-col items-stretch pt-3 md:pt-8">
+      <form class="flex flex-col items-stretch pt-3 md:pt-8" id="signupForm">
         <div class="flex flex-col pt-4">
           <div class="relative flex overflow-hidden rounded-md border-1 transition focus-within:border-blue-600 border-slate-600">
-            <input type="text" id="login-name" class="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Name" />
+            <input type="text" name="name" id="login-name" class="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Name" />
           </div>
+          <div class="text-red-600" id="nameError"></div> 
         </div>
         <div class="flex flex-col pt-4">
           <div class="relative flex overflow-hidden rounded-md border-1 transition focus-within:border-blue-600 border-slate-600">
-            <input type="email" id="login-email" class="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Email" />
+            <input type="email" name="email" id="login-email" class="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Email" />
           </div>
+          <div class="text-red-600" id="emailError"></div> 
         </div>
         <div class="mb-4 flex flex-col pt-4">
           <div class="relative flex overflow-hidden rounded-md border-1 transition focus-within:border-blue-600 border-slate-600">
-            <input type="password" id="login-password" class="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Password (minimum 8 characters)" />
+            <input type="password" name="password" id="login-password" class="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Password (minimum 8 characters)" />
           </div>
+          <div class="text-red-600" id="passwordError"></div> 
         </div>
         <div class="block">
-          <input class="mr-2 h-5 w-5 appearance-none rounded border border-gray-300 bg-contain bg-no-repeat align-top text-black shadow checked:bg-blue-600 focus:border-blue-600 focus:shadow" type="checkbox" id="remember-me" style="background-image: url(&quot;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/%3e%3c/svg%3e&quot;)"/>
-          <label class="inline-block" for="remember-me"> I agree to the <a class="underline" href="#">Terms and Conditions</a></label>
+          <input class="mr-2 h-5 w-5 appearance-none rounded border border-gray-300 bg-contain bg-no-repeat align-top text-black shadow checked:bg-blue-600 focus:border-blue-600 focus:shadow" name="terms" type="checkbox" id="terms" style="background-image: url(&quot;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/%3e%3c/svg%3e&quot;)"/>
+          <label class="inline-block" for="terms"> I agree to the <a class="underline" href="#">Terms and Conditions</a></label>
+          <div class="text-red-600" id="termsError"></div> 
         </div>
         <button type="submit" class="mt-6 rounded-lg bg-blue-600 px-4 py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-32">Sign up</button>
         <p class="mt-6 text-center font-medium md:text-left">
@@ -51,4 +55,5 @@
   </div>
 </div>
 </main>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="./../../js/main.js"></script>
