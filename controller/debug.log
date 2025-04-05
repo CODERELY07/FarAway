@@ -1,0 +1,65 @@
+[05-Apr-2025 08:16:37 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:16:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:17:05 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:17:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:17:38 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:17:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:17:43 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:17:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:18:01 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:18:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:18:11 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:18:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:18:59 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:18:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:19:26 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:19:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:19:31 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:19:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:20:08 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:20:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:20:19 Europe/Berlin] PHP Warning:  require_once(./connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:20:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 15
+[05-Apr-2025 08:21:45 Europe/Berlin] PHP Warning:  require(./vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 17
+[05-Apr-2025 08:21:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 17
+[05-Apr-2025 08:22:18 Europe/Berlin] PHP Warning:  require(./vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 17
+[05-Apr-2025 08:22:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FarAway\controller\send_verification.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\FarAway\controller\send_verification.php on line 17

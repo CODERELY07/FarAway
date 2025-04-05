@@ -1,7 +1,6 @@
 <?php 
   include './../../partials/head.php'; 
   include './../../middleware/authChecker.php';
-
 ?>
 
 <main>
@@ -17,7 +16,7 @@
   </div>
   <div class="flex w-full flex-col md:w-1/2">
     <div class="flex justify-center pt-12 md:justify-start md:pl-12">
-      <a href="./../../index.php" class="text-2xl font-bold text-blue-600 logo"> FarAway</a>
+      <a href="./index.php" class="text-2xl font-bold text-blue-600 logo"> FarAway</a>
     </div>
     <div class="my-auto mx-auto flex flex-col justify-center px-6 pt-8 md:justify-start lg:w-[28rem]">
       <p class="text-center text-3xl mb-4 font-bold md:text-left md:leading-tight">Create your free account</p>
@@ -48,7 +47,7 @@
           <div class="text-red-600" id="emailErrorSignin"></div> 
         </div>
         <div class="flex justify-end my-1">
-          <a href="#" class="mb-2 text-center text-sm font-medium text-gray-600 md:text-left">Forgot password?</a>
+          <a href="./views/auth/forgot_password.php" class="mb-2 text-center text-sm font-medium text-gray-600 md:text-left">Forgot password?</a>
         </div>
         <div class="flex flex-col">
           <div class="relative flex overflow-hidden rounded-md border-1 transition focus-within:border-blue-600 border-slate-600">
@@ -64,7 +63,7 @@
         <button type="submit" class="mt-6 rounded-lg bg-blue-600 px-4 py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-32">Sign in</button>
         <p class="mt-6 text-center font-medium md:text-left">
         Doesn't Have an Account Yet?
-        <a href="signup.php" class="whitespace-nowrap font-semibold text-blue-600">Signup here</a>
+        <a href="./views/auth/signup.php" class="whitespace-nowrap font-semibold text-blue-600">Signup here</a>
       </p>
       </form>
     </div>
@@ -72,5 +71,5 @@
 </div>
 </main>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="./../../js/main.js"></script>
+<script src="./js/main.js"></script>
 

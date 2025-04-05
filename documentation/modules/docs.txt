@@ -1,0 +1,27 @@
+Signup
+
+signup.php -> signup form display the signup UI 
+controller/signup.php -> handle the php and sql logic to signpu or save the data of the user into the database it make also handle validation
+js/main.js -> Signup Ajax request, request the data to controller/signup.php
+
+Sign in
+signin.php -> signin form display the signin UI 
+controller/signin.php -> handle the php and sql logic to signpu or save the data of the user into the database it make also handle validation
+js/signin.js -> signin Ajax request, request the data to controller/signin.php
+
+Remember Me 
+
+G-Recaptcha
+controller/sigin.php -> add logic for reactcha
+signin.php -> add the recpta client
+
+forgot-password 
+->install composer require phpmailer/phpmailer
+->set up smtp in google 
+->forgot-password.php -> display UI
+->js/main -> Ajax request for email, verify_code and resetpassword
+->controller/send_verification.php -> logic to send verfication code in email provided
+->verify_code.php -> Display UI to verify_code
+->controller/verify_code.php -> logic to verify_code
+->reset_password.php -> Reset Password UI
+->controller/reset_password.php -> logic to reset password

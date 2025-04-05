@@ -1,0 +1,1 @@
+use the base tag in partials/head.php to fix links

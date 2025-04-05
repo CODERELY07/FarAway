@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['username'] = $user['name'];
          
                 // Send a success response
-                echo json_encode(['success' => true, 'message' => 'Login successful.', 'redirect' => './../../index.php']);
+                echo json_encode(['success' => true, 'message' => 'Login successful.', 'redirect' => './index.php']);
                 exit;
             } else {
                 // Password mismatch error

@@ -37,8 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(['success' => false, 'errors' => $errors]);
         exit;
     }
-
-
     try {
         // Check if email exists
         $stmt = $conn->prepare("SELECT user_id FROM users WHERE email = :email LIMIT 1");
@@ -59,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':password', $hashedPassword);
 
         if ($stmt->execute()) {
-            echo json_encode(['success' => true, 'message' => 'User registered successfully.', 'redirect' => './signin.php']);
+            echo json_encode(['success' => true, 'message' => 'User registered successfully.', 'redirect' => './views/auth/signin.php']);
         } else {
             echo json_encode(['success' => false, 'message' => 'An error occurred during registration.']);
         }
