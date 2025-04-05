@@ -25,3 +25,5 @@ forgot-password
 ->controller/verify_code.php -> logic to verify_code
 ->reset_password.php -> Reset Password UI
 ->controller/reset_password.php -> logic to reset password
+
+Email verfication

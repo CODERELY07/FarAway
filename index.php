@@ -3,7 +3,24 @@
     include './partials/header.php'; 
 
     include './connection.php';
-    
+    if(isset($_SESSION['email'])){
+        $email = $_SESSION['email'];
+        $stmt = $conn->prepare("SELECT verified_email FROM users WHERE email = :email");
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        
+        if($stmt->rowCount() > 0){
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+            if(is_null($result['verified_email'])){
+            
+                header("Location: ./views/auth/verify_email.php");
+                
+                exit;
+            }
+        }
+    }
     $response = ['loggedIn' => false];
     
     if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_me']) && isset($_COOKIE['user_email'])) {

@@ -60,7 +60,7 @@ if (isset($_POST['resetEmail'])) {
                     $mail->Host = 'smtp.gmail.com'; 
                     $mail->SMTPAuth = true; 
                     $mail->Username = 'calipjo.markely@gmail.com'; 
-                    $mail->Password = 'mogn trwp crra eose';
+                    $mail->Password = 'enbe zjec fwiu zzoa';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
                     $mail->Port = 587; 
 

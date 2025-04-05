@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
     try {
         // Prepare SQL query
-        $stmt = $conn->prepare("SELECT user_id, password, name, remember_me FROM users WHERE email = :email");
+        $stmt = $conn->prepare("SELECT user_id, password, name, remember_me,email FROM users WHERE email = :email");
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
         
@@ -93,9 +93,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['username'] = $user['name'];
+                $_SESSION['email'] = $user['email'];
          
                 // Send a success response
-                echo json_encode(['success' => true, 'message' => 'Login successful.', 'redirect' => './index.php']);
+                echo json_encode(['success' => true, 'message' => 'Login successful.', 'redirect' => './views/auth/verify_email.php']);
                 exit;
             } else {
                 // Password mismatch error

@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include './../connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -56,8 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':password', $hashedPassword);
 
+        
         if ($stmt->execute()) {
-            echo json_encode(['success' => true, 'message' => 'User registered successfully.', 'redirect' => './views/auth/signin.php']);
+            $_SESSION['user_id'] = $conn->lastInsertId();
+            $_SESSION['username'] = $name;
+            $_SESSION['email'] = $email;
+            echo json_encode(['success' => true, 'message' => 'User registered successfully.', 'redirect' => './views/auth/verify_email.php']);
         } else {
             echo json_encode(['success' => false, 'message' => 'An error occurred during registration.']);
         }
