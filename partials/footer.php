@@ -50,6 +50,6 @@
     </div>
   </div>
 </footer>
-<script src="./js/util.js"></script>
+<script src="./js/util.js?<?php echo time();?>"></script>
 </body>
 </html>

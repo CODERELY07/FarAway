@@ -44,4 +44,28 @@
     const walk = (x - startX) * 3; 
     list.scrollLeft = scrollLeft - walk;
 });
+// toggle
+document.addEventListener('DOMContentLoaded', function () {
+  // Select the toggle buttons and content divs
+  const toggleButtons = document.querySelectorAll('.toggle-button');
+  const toggleContents = document.querySelectorAll('.toggle-content');
 
+  // Loop through each toggle button
+  toggleButtons.forEach((button, index) => {
+      console.log(`Button ${index}:`, button);  
+      console.log(`Content ${index}:`, toggleContents[index]); 
+      button.addEventListener('click', () => {
+          const content = toggleContents[index];
+
+          content.classList.toggle('hide');
+
+          if (!content.classList.contains('hide')) {
+              content.style.transition = 'opacity 0.3s ease-in-out';
+              content.style.opacity = '1';
+          } else {
+              content.style.transition = 'opacity 0.3s ease-in-out';
+              content.style.opacity = '0';
+          }
+      });
+  });
+});

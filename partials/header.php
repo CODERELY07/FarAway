@@ -35,13 +35,57 @@
             </div>
           </div>
         <?php else: ?>
-          <div class="hidden sm:flex">
-              <a
-                class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600"
-                href="./logout.php"
-              >
-                Logout
-              </a>
+          <div class="sm:flex">
+          
+                <div class="my-20 pointer toggle-button">
+                  <div class="relative flex w-60 items-center overflow-hidden rounded-lg bg-white p-4 ">
+                    <div class="shrink-0 h-12 w-12 rounded-full bg-gray-100"></div>
+                    <div class="ml-3">
+                      <p class="font-medium text-gray-800"><?php echo $_SESSION['username']?></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="toggle-parent"></div>
+                  <div class="toggle-content hide">
+                    <ul>
+                        <li class="hover:bg-sky-50 ">
+                          <i class="fa-solid fa-gear"></i> 
+                          <span>    
+                            <a class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600" href="#">
+                              Setting
+                            </a>
+                          </span>
+                        <?php if(isset($_SESSION['shopname']) && !is_null($_SESSION['shopname'])): ?>
+                        <li class="hover:bg-sky-50 ">
+                          <i class="fa-brands fa-sellsy"></i>
+                          <span>    
+                            <a class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600" href="./views/host/dashboard.php">
+                              Dashboard
+                            </a>
+                          </span>
+                        </li>
+                        <?php else:?>
+                        <li class="hover:bg-sky-50 ">
+                          <i class="fa-brands fa-sellsy"></i>
+                          <span>    
+                            <a class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600" href="./views/host/index.php">
+                              Start Leasing
+                            </a>
+                          </span>
+                        </li>
+                        <?php endif;?>
+                        <li class="hover:bg-sky-50 ">
+                          <i class="fa-solid fa-right-from-bracket"></i>
+                          <span>    
+                            <a class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600" href="./logout.php">
+                              Logout
+                            </a>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+            
             </div>
         <?php endif; ?>
         <div class="block md:hidden">

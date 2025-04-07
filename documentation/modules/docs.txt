@@ -10,6 +10,7 @@ controller/signin.php -> handle the php and sql logic to signpu or save the data
 js/signin.js -> signin Ajax request, request the data to controller/signin.php
 
 Remember Me 
+controller/sigin.php -> set coockies for remember Me
 
 G-Recaptcha
 controller/sigin.php -> add logic for reactcha
@@ -27,3 +28,20 @@ forgot-password
 ->controller/reset_password.php -> logic to reset password
 
 Email verfication
+views/auth/verify_email -> UI to verify email
+controller/verify_email -> logic to send to email the verification link 
+views/auth/verify -> make the user verified
+
+Start Leasing
+views/host/index
+views/registraion.php
+views/dashboard.php
+views/main.js -> RegisterForm
+controller/register.php
+js/util.js -> toggle
+
+add Properties
+https://github.com/wilfredpine/philippine-address-selector -> I download the phillipne-address-selector to use
+->all the file in views/host
+->js/main.js -> addProperties
+->controller/host/add_properties.php

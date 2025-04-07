@@ -35,6 +35,41 @@ ol, ul, menu, summary {
     display: none; /* Safari and Chrome */
 }
 
+ul{
+  list-style: none;
+  padding: 0px !important;
+  margin: 0;
+}
+li{
+   padding: 10px !important;
+   cursor: pointer;
+}
+/* Hide content by default */
+ .hide {
+  display: none;
+}
+.toggle-content {
+  background-color:#fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  right: 70px;
+  top: 70px;
+  margin-top: 10px;
+  width: max-content;
+  transition: opacity 0.5s ease-in-out;
+}
+.toggle-content ul li span{
+  margin-left: 10px;
+} 
+
+/* Hide the content when it's not visible */
+.toggle-content.hide {
+  display: none;
+}
+.toggle-parent{
+  position: relative; 
+} */
+
 /* From Uiverse.io by gharsh11032000 */ 
 .form-container {
     max-width: 400px;
@@ -125,7 +160,9 @@ ol, ul, menu, summary {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.082);
     border-radius: 15px;
   }
-  
+  .pointer{
+    cursor: pointer;
+  }
   .mainHeading {
     font-size: 1.1em;
     color: rgb(15, 15, 15);

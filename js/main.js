@@ -259,4 +259,78 @@ $(document).ready(function() {
         });
     });
 
+    // Register 
+    $('#registerForm').on('submit', function(event) {
+        event.preventDefault(); 
+        const formData = $(this).serialize();
+
+        // Clear previous errors
+        $('#shopenameError, #addressError').text('');
+
+        $.ajax({
+            url: './controller/host/register.php',
+            type: 'POST',
+            data: formData,
+            success: function(response) {
+                const res = JSON.parse(response);
+
+                if (res.success) {
+                    // Redirect on success
+                    alert('Register Successfully!, This will Automcatically Logout then Login Again!')
+                    $('#registerForm')[0].reset();
+                    window.location.href = res.redirect;
+                } else {
+                    // Show errors dynamically
+                    if (res.errors) {
+                        if (res.errors.shopename) {
+                            $('#shopenameError').text(res.errors.shopename);
+                        }
+                        if (res.errors.address) {
+                            $('#addressError').text(res.errors.address);
+                        }
+                        console.log(res.errors);
+                    }
+                    console.log(res.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert("Error: " + error);
+            }
+        });
+    });
+    // Add properties
+        $('#addProperties').on('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+    
+            var formData = new FormData(this); // Create FormData object from the form
+    
+            $.ajax({
+                url: './controller/host/add_properties.php', 
+                type: 'POST',
+                data: formData,
+                contentType: false, 
+                processData: false, 
+                success: function (response) {
+                    try {
+                        var result = JSON.parse(response); // Parse the response from PHP to JSON
+                        if (result.status === 'success') {
+                            alert('Property added successfully!');
+                            // You can clear the form or redirect the user here
+                            $('#addProperties')[0].reset();
+                        } else {
+                            alert('Error: ' + result.message);
+                        }
+                    } catch (e) {
+                        alert('Error parsing the response. Please try again.');
+                    }
+                },
+                error: function () {
+                    alert('Something went wrong. Please try again.');
+                }
+            });
+        });
+  
+    
+
+    
 });
