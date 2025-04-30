@@ -84,9 +84,11 @@
                     </a>
                 </li>
                 <li class="flex m-2 cursor-pointer border-l-blue-600 py-3 pl-5 text-sm  transition-all duration-100 ease-in-out hover:border-l-4 hover:text-blue-600">
-                    <span class="mr-5"
-                    ><i class="fa-solid fa-list-check"></i></span>
-                    Manage Properties
+                    <a href="./views/host/manage_properties.php">
+                        <span class="mr-5"
+                        ><i class="fa-solid fa-list-check"></i></span>
+                        Manage Properties
+                    </a>
                 </li>
                 </ul>
             </div>

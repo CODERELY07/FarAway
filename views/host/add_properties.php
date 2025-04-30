@@ -72,13 +72,14 @@
                     <p class="shrink-0 w-32 font-medium">Zone  (Optional)</p>
                     <input type="text"class="mb-2 w-full rounded-md border border-gray-300 bg-white px-2 py-2 outline-none ring-blue-600 sm:mr-4 sm:mb-0 focus:ring-1" name="zone">
                 </div>
-            </div>
-          
-            <div class="flex flex-wrap gap-4 border-b border-gray-300 py-4">
-                <div class="flex items-center w-auto">
+                    <div class="flex items-center w-auto">
                     <p class="shrink-0 w-32 font-medium">Price</p>
                     <input type="text" class="w-full rounded-md border border-gray-300 bg-white px-2 py-2 outline-none ring-blue-600 focus:ring-1" name="price">
                 </div>
+            </div>
+          
+            <div class="flex flex-wrap gap-4 border-b border-gray-300 py-4">
+            
                 <div class="flex items-center w-auto">
                     <p class="shrink-0 w-32 font-medium">Max Guest</p>
                     <input type="number" class="w-full rounded-md border border-gray-300 bg-white px-2 py-2 outline-none ring-blue-600 focus:ring-1" name="max_guest">
@@ -117,7 +118,11 @@
 
             <!-- Upload Photos Section -->
             <div class="flex flex-col gap-4 border-b border-gray-300 py-4 sm:flex-row">
-                <p class="shrink-0 w-32 font-medium">Upload Photos</p>
+                <p class="shrink-0 w-32 font-medium">Front Photo</p>
+                <input type="file" class="mb-2 w-full rounded-md border border-gray-300 bg-white px-2 py-2 outline-none ring-blue-600 sm:mr-4 sm:mb-0 focus:ring-1" name="front_photo">
+            </div>
+            <div class="flex flex-col gap-4 border-b border-gray-300 py-4 sm:flex-row">
+                <p class="shrink-0 w-32 font-medium"> Upload Other Photos</p>
                 <input type="file" class="mb-2 w-full rounded-md border border-gray-300 bg-white px-2 py-2 outline-none ring-blue-600 sm:mr-4 sm:mb-0 focus:ring-1" name="photos[]" multiple>
             </div>
             <div class="flex justify-end py-4 sm:hidden">

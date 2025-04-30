@@ -312,10 +312,9 @@ $(document).ready(function() {
                 processData: false, 
                 success: function (response) {
                     try {
-                        var result = JSON.parse(response); // Parse the response from PHP to JSON
+                        var result = JSON.parse(response);
                         if (result.status === 'success') {
                             alert('Property added successfully!');
-                            // You can clear the form or redirect the user here
                             $('#addProperties')[0].reset();
                         } else {
                             alert('Error: ' + result.message);
@@ -329,8 +328,4 @@ $(document).ready(function() {
                 }
             });
         });
-  
-    
-
-    
 });

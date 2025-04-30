@@ -28,13 +28,12 @@ ol, ul, menu, summary {
     font-weight: bold;
 }
 #category-list {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    -ms-overflow-style: none;  
 }
 
 #category-list::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+    display: none; 
 }
-
 ul{
   list-style: none;
   padding: 0px !important;

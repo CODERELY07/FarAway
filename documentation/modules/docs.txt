@@ -44,4 +44,15 @@ add Properties
 https://github.com/wilfredpine/philippine-address-selector -> I download the phillipne-address-selector to use
 ->all the file in views/host
 ->js/main.js -> addProperties
+->uploads -> save the image in uploads folder
 ->controller/host/add_properties.php
+
+Manage Properties
+views/host/manage_properties.php
+js/fetch.js
+fetch/fetch_properties.php
+
+Display Property Details -> when click one property in manage Property
+fetch/fetch_property_details.php
+js/fetch.js
+views/host/property_details.php
