@@ -29,6 +29,13 @@
         if(!$property){
             die("Property Not Found");
         }
+        $stmtPhotos = $conn->prepare("
+        SELECT photo_path 
+        FROM property_photos 
+        WHERE property_id = :property_id
+        ");
+        $stmtPhotos->execute(['property_id' => $property_id]);
+        $property['photo_path'] = $stmtPhotos->fetchAll(PDO::FETCH_ASSOC);
     }catch(PDOException $e){
         echo "Dabase Error: " . $e;
     }
@@ -44,11 +51,16 @@
 
 <main class="mt-12">
         <div class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
-            <div class="grid grid-cols-2 gap-2">
-                <div>
-                    <img class="object-cover object-center h-40 max-w-full rounded-lg md:h-60" src="<?php echo $photo ?>" alt="Property Photo" />
-                </div>
+          <div class="grid grid-cols-2 gap-2">
+        <?php foreach ($property['photo_path'] as $photo): ?>
+            <div>
+            <img class="object-cover object-center h-40 max-w-full rounded-lg md:h-60" 
+                src="<?php echo htmlspecialchars($photo['photo_path']); ?>" 
+                alt="Property Photo" />
             </div>
+        <?php endforeach; ?>
+        </div>
+
             <div class="w-screen h-screen overflow-hidden">
                 <div class="mx-auto max-w-screen-lg px-3 py-10">
                     <div class="flex">
@@ -199,12 +211,25 @@
 
                             <div class="text-center">
                                 <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer">Book Now</button>
-                            </div>
+                                <a href="views/user/chat.php?user_id=<?php echo $_SESSION['user_id']; ?>&with_id=<?php echo $property['host_id']; ?>" class="bg-blue-600 mt-2 block hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded inline-flex items-center gap-2 shadow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4l16 8-16 8V4z" />
+                                    </svg>
+                                    Send Message
+                                </a>
 
+
+                            </div>
+                            
                             <div id="form-message" class="text-center mt-4 text-lg font-medium"></div>
+                            
                             </form>
+                          
+
                         </div>
-                    </div>          
+
+                    </div>        
+                      
                 </div>
             </div>
         </div>
@@ -234,10 +259,23 @@
           url: 'controller/booking/create_booking.php',
           method: 'POST',
           data: $(this).serialize(),
-          success: function (response) {
-            $('#form-message').text(response).removeClass('text-red-600').addClass('text-green-600');
-            $('#booking-form')[0].reset();
-          },
+        success: function (response) {
+            console.log(response);
+            if(response.redirect){
+                setTimeout(() => {
+                    window.location.href = response.redirect;   
+                }, 1300);
+               
+            }
+            if(response.message){
+                $('#form-message').text(response.message).removeClass('text-red-600').addClass('text-green-600');   
+            }else{
+                $('#form-message').text(response).removeClass('text-red-600').addClass('text-green-600');          
+            }
+                
+             $('#booking-form')[0].reset();
+            },
+
           error: function () {
             $('#form-message').text('Something went wrong.').removeClass('text-green-600').addClass('text-red-600');
           }

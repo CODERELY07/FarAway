@@ -97,6 +97,23 @@ $(document).ready(function () {
           description: "Stay cool with a fully functional AC system.",
           data_amenity:"air_conditioning"
         },
+        swimming_pool: {
+  icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 text-blue-500">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M3 18c1.5 0 1.5-1.5 3-1.5s1.5 1.5 3 1.5 1.5-1.5 3-1.5 1.5 1.5 3 1.5 1.5-1.5 3-1.5 1.5 1.5 3 1.5M7.5 12V6.75A2.25 2.25 0 0111.25 4.5v0A2.25 2.25 0 0113.5 6.75V12M10.5 9h3" />
+         </svg>`,
+          title: "Swimming Pool",
+          description: "Enjoy access to a clean and refreshing swimming pool.",
+          data_amenity: "swimming_pool"
+        },
+
+        parking: {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 text-blue-500">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6h3.75a3 3 0 100-6H6v12m3 0h3.75a3 3 0 000-6H9" />
+                </svg>`,
+          title: "Parking",
+          description: "Convenient on-site parking available.",
+          data_amenity: "parking"
+        },
       };
         let propertyHtml = `
                 <div class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">

@@ -24,7 +24,7 @@
                 </svg>
                 Dashboard
             </a>
-            <a href="#" class="flex cursor-pointer items-center border-l-blue-600 py-2 px-4 text-sm font-medium outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-blue-600 hover:text-blue-600 focus:border-l-4 <?php echo ($currentPage == 'message.php') ? 'border-l-4 text-blue-600' : 'text-gray-600'; ?>">
+            <a href="./views/host/messages.php" class="flex cursor-pointer items-center border-l-blue-600 py-2 px-4 text-sm font-medium outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-blue-600 hover:text-blue-600 focus:border-l-4 <?php echo ($currentPage == 'message.php') ? 'border-l-4 text-blue-600' : 'text-gray-600'; ?>">
                 <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
                 </svg>
@@ -92,7 +92,7 @@
                 </li>
                 </ul>
             </div>
-            <a href="#" class="flex cursor-pointer items-center border-l-blue-600 py-2 px-4 text-sm font-medium  outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-blue-600 hover:text-blue-600 focus:border-l-4 <?php echo ($currentPage == 'orders.php') ? 'border-l-4 text-blue-600' : 'text-gray-600'; ?>">
+            <a href="./views/host/manage_bookings.php" class="flex cursor-pointer items-center border-l-blue-600 py-2 px-4 text-sm font-medium  outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-blue-600 hover:text-blue-600 focus:border-l-4 <?php echo ($currentPage == 'orders.php') ? 'border-l-4 text-blue-600' : 'text-gray-600'; ?>">
                 <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>

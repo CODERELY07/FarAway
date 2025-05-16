@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Message</title>
+</head>
+<body>
+    <h2>Send a Message</h2>
+    <form method="POST" action="send_message.php">
+        <label>Sender ID:</label><br>
+        <input type="number" name="sender_id" required><br><br>
+
+        <label>Receiver ID:</label><br>
+        <input type="number" name="receiver_id" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea name="message_text" required></textarea><br><br>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

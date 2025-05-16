@@ -8,6 +8,18 @@ try {
     $check_in = $_POST['check_in_date'];
     $check_out = $_POST['check_out_date'];
 
+    if(empty($user_id)){
+       $location = "./views/auth/signup.php";
+
+        $response = [
+            'redirect' => $location,
+            'message' => 'Sigin First'
+        ];
+
+        header('Content-Type: application/json');
+        echo json_encode($response);
+        exit();
+    }
     // Basic validation
     if (!$check_in || !$check_out || $check_in >= $check_out) {
         die("Invalid check-in or check-out date.");
@@ -41,7 +53,7 @@ try {
             ':check_out' => $check_out
         ]);
 
-        echo "Booking request sent! Reservation ID: " . $conn->lastInsertId();
+        echo "Booking request sent!";
     }
 
 } catch (PDOException $e) {

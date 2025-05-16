@@ -85,7 +85,6 @@
                     </ul>
                   </div>
                 </div>
-            
             </div>
         <?php endif; ?>
         <div class="block md:hidden">
