@@ -1,4 +1,4 @@
-<!-- Change the contents Icons and other -->
+
 <?php 
 
   include('./connection.php');
@@ -12,13 +12,12 @@
     echo "Database Error: " . $e;
   }
 
-  
 ?>
-<section class="bg-white px-4 py-10">
-  <h1 class="mb-8 text-center text-4xl font-bold text-gray-800">House</h1>
+<section class="bg-white px-2 sm:px-4 py-8 sm:py-10">
+  <h1 class="mb-8 text-center text-3xl sm:text-4xl font-bold text-gray-800">House</h1>
 
   <?php if(!empty($properties)): ?>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 sm:gap-6">
 
       <?php foreach($properties as $property): ?>
         <?php
@@ -27,51 +26,54 @@
             $photo = $property['front_photo'];
           }
         ?>
-        <article class="overflow-hidden rounded-xl text-gray-700 shadow-md duration-500 ease-in-out hover:shadow-xl cursor-pointer">
-          <div>
-          <img 
-            src="<?php echo $photo ?>" 
-            alt="Property Front photo" 
-            class="w-full h-48 object-cover rounded-t-xl"
-          />
-          </div>
-          <div class="p-4 pb-0"> 
-            <div class="pb-2">
-              <h1 class="text-3xl font-semibold">
-                <?php echo $property['name']?>
-              </h1>
-              <a href="#" class="text-lg hover:text-blue-600 font-medium duration-500 ease-in-out">
-                <?php 
-                  echo $property['region'] . " " . $property['province'] . " " . $property['city'] . " " . $property['barangay'];
-                ?>
-              </a>
+        <a href="./views/user/property_details.php?id=<?php echo $property['property_id']?>" class="block h-full">
+          <article class="flex flex-col h-full overflow-hidden rounded-xl text-gray-700 shadow-md duration-300 ease-in-out hover:shadow-xl cursor-pointer bg-white">
+            <div class="flex-shrink-0">
+              <img 
+                src="<?php echo $photo ?>" 
+                alt="Property Front photo" 
+                class="w-full h-40 sm:h-48 md:h-44 lg:h-48 xl:h-52 object-cover rounded-t-xl transition"
+                loading="lazy"
+              />
             </div>
-            <ul class="flex items-center border-t border-b border-gray-200 py-2">
-              <li class="mr-4 flex items-center">
-                <i class="fa-solid fa-bed mr-2 text-2xl text-blue-600"></i>
-                <span class="text-sm"><?php echo $property['num_bedrooms'] ?> Beds</span>
-              </li>
-              <li class="mr-4 flex items-center">
-                <i class="fa-solid fa-shower mr-2 text-2xl text-blue-600"></i>
-                <span class="text-sm"><?php echo $property['num_bathrooms']?> Baths</span>
-              </li>
-            </ul>
-            <ul class="flex justify-between pt-2">
-              <li>
-                <span class="text-sm text-gray-400">Price</span>
-                <p class="text-base font-medium">&#8369; <?php echo $property['price']?></p>
-              </li>
-              <li>
-                <span class="text-sm text-gray-400">Rating</span>
-                <ul class="flex items-center">
-                  <li class="text-yellow-500">
-                    <!-- Star SVG here -->
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </article>
+            <div class="flex flex-col flex-1 p-4 pb-0"> 
+              <div class="pb-2">
+                <h1 class="text-xl sm:text-2xl font-semibold truncate">
+                  <?php echo $property['name']?>
+                </h1>
+                <span class="block text-base sm:text-lg text-gray-600 hover:text-blue-600 font-medium duration-300 ease-in-out truncate">
+                  <?php 
+                    echo $property['region'] . " " . $property['province'] . " " . $property['city'] . " " . $property['barangay'];
+                  ?>
+                </span>
+              </div>
+              <ul class="flex items-center border-t border-b border-gray-200 py-2">
+                <li class="mr-4 flex items-center">
+                  <i class="fa-solid fa-bed mr-2 text-xl sm:text-2xl text-blue-600"></i>
+                  <span class="text-xs sm:text-sm"><?php echo $property['num_bedrooms'] ?> Beds</span>
+                </li>
+                <li class="mr-4 flex items-center">
+                  <i class="fa-solid fa-shower mr-2 text-xl sm:text-2xl text-blue-600"></i>
+                  <span class="text-xs sm:text-sm"><?php echo $property['num_bathrooms']?> Baths</span>
+                </li>
+              </ul>
+              <ul class="flex justify-between pt-2 pb-3">
+                <li>
+                  <span class="text-xs sm:text-sm text-gray-400">Price</span>
+                  <p class="text-base font-medium">&#8369; <?php echo $property['price']?></p>
+                </li>
+                <li>
+                  <span class="text-xs sm:text-sm text-gray-400">Rating</span>
+                  <ul class="flex items-center">
+                    <li class="text-yellow-500">
+                      <!-- Star SVG here -->
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </a>
       <?php endforeach; ?>
     </div>
   <?php else:?>
