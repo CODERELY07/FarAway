@@ -22,11 +22,9 @@
         }
     }
     $response = ['loggedIn' => false];
-    
     if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_me']) && isset($_COOKIE['user_email'])) {
         $email = $_COOKIE['user_email'];
         $token = $_COOKIE['remember_me'];
-    
         try {
             $stmt = $conn->prepare("SELECT user_id, name FROM users WHERE email = :email AND remember_me = :token");
             $stmt->bindParam(':email', $email);
@@ -44,8 +42,6 @@
             error_log("Auto login error: " . $e->getMessage());
         }
     }
-    
-    
 ?>
 
 <main class="mt-12 ">
@@ -81,7 +77,7 @@
     <div id="defaultProperties">
         <?php include 'includes/properties.php'; ?>
     </div>
-        <div id="searchResults" class="mt-8 max-w-screen-xl mx-auto hidden">
+        <div id="searchResults" class="mt-8 max-w-screen-xl flex justify-center gap-5 items-center mx-auto hidden">
             <!-- Full property cards will be inserted here -->
         </div>
 

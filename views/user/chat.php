@@ -47,7 +47,16 @@ $messages = $stmt->fetchAll();
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col justify-center items-center py-10 px-4">
+     <div class="mb-10">
+          <div class="md:flex md:items-center md:gap-12">
+        <a class="block text-3xl text-teal-600" href="./../../index.php">
+            <span class="sr-only">Home</span>
+            <h1 class="logo text-blue-500">FarAway</h1>
+        </a>
+    </div>
+    </div>
     <div class="w-full max-w-3xl bg-white rounded-lg shadow-lg p-6 flex flex-col h-[600px]">
+        
         <h2 class="text-2xl font-semibold mb-4 text-gray-800">Chat with <?php echo htmlspecialchars($partner['name']); ?></h2>
 
         <div id="chat-box" class="flex-1 overflow-y-auto border border-gray-300 rounded-md p-4 mb-6 bg-gray-100">
@@ -68,7 +77,6 @@ $messages = $stmt->fetchAll();
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
-
         <form method="post" class="flex gap-4">
             <textarea name="message_text" rows="3" required
                 class="flex-grow resize-none border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"

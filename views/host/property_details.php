@@ -13,7 +13,7 @@
     }
 ?>
 <main class="min-h-screen">
-    <div id="property-details">
+    <div class="container w-full" id="property-details">
         <!-- Property details will be dynamically loaded here -->
     </div>
 </main>

@@ -1,4 +1,5 @@
-<?php session_start();?>
+<?php 
+session_start();?>
 <header class="bg-white p-4 shadow-md">
   <div class="mx-auto max-w-screen-xxl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
@@ -9,15 +10,11 @@
         </a>
       </div>
 
-      <div class="hidden md:block">
-        <?php include 'nav.php'?>
-      </div>
-
-      <div class="flex items-center gap-4">
+      <div class="flex gap-4">
         <?php 
              if (!isset($_SESSION['user_id']) ):
         ?>
-          <div class="sm:flex sm:gap-4">
+          <div class="flex items-center">
             <a
               class="rounded-md bg-slate-950 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
               href="./views/auth/signin.php"
@@ -25,7 +22,7 @@
               Sign In
             </a>
 
-            <div class="hidden sm:flex">
+            <div>
               <a
                 class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600"
                 href="./views/auth/signup.php"
@@ -36,7 +33,6 @@
           </div>
         <?php else: ?>
           <div class="sm:flex">
-          
                 <div class="my-20 pointer toggle-button">
                   <div class="relative flex w-60 items-center overflow-hidden rounded-lg bg-white p-4 ">
                     <div class="shrink-0 h-12 w-12 rounded-full bg-gray-100"></div>
@@ -95,22 +91,6 @@
                 </div>
             </div>
         <?php endif; ?>
-        <div class="block md:hidden">
-          <button
-            class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
       </div>
     </div>
   </div>

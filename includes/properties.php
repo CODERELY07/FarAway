@@ -14,11 +14,8 @@
 
 ?>
 <section class="bg-white px-2 sm:px-4 py-8 sm:py-10">
-  <h1 class="mb-8 text-center text-3xl sm:text-4xl font-bold text-gray-800">House</h1>
-
   <?php if(!empty($properties)): ?>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 sm:gap-6">
-
       <?php foreach($properties as $property): ?>
         <?php
           $photo = "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
@@ -61,14 +58,6 @@
                 <li>
                   <span class="text-xs sm:text-sm text-gray-400">Price</span>
                   <p class="text-base font-medium">&#8369; <?php echo $property['price']?></p>
-                </li>
-                <li>
-                  <span class="text-xs sm:text-sm text-gray-400">Rating</span>
-                  <ul class="flex items-center">
-                    <li class="text-yellow-500">
-                      <!-- Star SVG here -->
-                    </li>
-                  </ul>
                 </li>
               </ul>
             </div>

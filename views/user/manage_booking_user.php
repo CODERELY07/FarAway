@@ -92,13 +92,20 @@ $history = $stmt2->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <title>My Bookings</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./../../css/style.css">
 </head>
 <body class="bg-gray-100 p-6">
-    <h1 class="text-3xl font-bold mb-6">My Bookings</h1>
+    <div class="md:flex md:items-center md:gap-12">
+    <a class="block text-teal-600" href="./../../index.php">
+        <span class="sr-only">Home</span>
+        <h1 class="logo text-blue-500">FarAway</h1>
+    </a>
+    </div>
+    <h3 class="text-2xl mt-10 font-bold mb-6">My Bookings</h3>
 
     <!-- Active Reservations -->
     <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">Active Reservations</h2>
+        <h2 class="text-xl font-semibold mb-4">Active Reservations</h2>
         <?php if (empty($active_reservations)): ?>
             <p class="text-gray-500">No active reservations.</p>
         <?php else: ?>

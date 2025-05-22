@@ -30,7 +30,7 @@
                 </svg>
 
                 Messages
-                <span class="ml-auto rounded-full bg-blue-600 px-2 text-xs text-white">6</span>
+                
             </a>
 <!-- 
             <div class="relative transition">

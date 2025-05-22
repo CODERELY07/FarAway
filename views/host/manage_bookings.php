@@ -57,10 +57,10 @@ try {
 include './../../partials/head.php'; 
 ?>
 
-<main class="min-h-screen bg-gray-100">
+<main class="min-h-screen bg-gray-100 ">
     <div class="w-full flex flex-col md:flex-row">
         <?php include './../../partials/host/dashabord_sidebar.php';?>
-        <div class="flex-1 px-2 sm:px-6 md:px-8 py-6">
+        <div class="flex-1 px-5 sm:px-6 md:px-8 py-6">
             <h1 class="text-xl sm:text-2xl font-bold mb-4">Pending Reservations</h1>
 
             <?php if (count($reservations) > 0): ?>

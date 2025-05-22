@@ -35,10 +35,6 @@
           </button>
         </div>
       </div>
-      <button class="-2 mt-4 flex items-center justify-center rounded-md border px-4 py-1 outline-none ring-gray-400 ring-offset-2 transition hover:border-transparent hover:bg-black hover:text-white focus:ring-2"><img class="mr-2 h-5" src="https://static.vecteezy.com/system/resources/previews/022/613/027/non_2x/google-icon-logo-symbol-free-png.png" alt /> Sign In  with Google</button>
-      <div class="relative mt-8 flex h-px place-items-center bg-gray-200">
-        <div class="absolute left-1/2 h-6 -translate-x-1/2 bg-white px-4 text-center text-sm text-gray-500">Or use email instead</div>
-      </div>
       <form class="flex flex-col items-stretch pt-3 md:pt-8" id="signinForm">
         <div class="flex flex-col pt-4">
           <div class="relative flex overflow-hidden rounded-md border-1 transition focus-within:border-blue-600 border-slate-600">

@@ -7,8 +7,16 @@
 ?>
 
 <main class="min-h-screen bg-gray-100 flex">
+    
     <!-- Main content -->
-    <div class="flex-1 p-6">
+    <div class="flex-1  p-10">
+          <div class="md:flex md:items-center md:gap-12">
+            <a class="block text-teal-600" href="./index.php">
+                <span class="sr-only">Home</span>
+                <h1 class="logo text-blue-500">FarAway</h1>
+            </a>
+        
+    </div>
         <div class="max-w-4xl mx-auto bg-white rounded shadow p-6">
             <h2 class="text-2xl font-semibold mb-6">Your Chat Contacts</h2>
 
