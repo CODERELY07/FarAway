@@ -50,62 +50,41 @@
 
 <main class="mt-12 ">
     <div class="bg-white flex py-3 px-2 rounded-full  p-2 border-gray-200  shadow-sm overflow-hidden max-w-5xl mx-auto">
-        <input type="email" placeholder="Search Place..." class="w-full outline-none bg-white pl-6 text-lg text-gray-700" />
+        <input type="text" id="searchInput" placeholder="Search Place..." class="w-full outline-none bg-white pl-6 text-lg text-gray-700" />
+       
+
         <button type="button" class="bg-blue-600 hover:bg-blue-700 transition-all text-white text-lg rounded-full px-6 py-3 shadow-lg transform hover:scale-105">
         <i class="fa-solid fa-magnifying-glass"></i>
         </button>
     </div>
     <div class="inset-shadow-xs p-3 mt-4 flex items-center justify-center">
-      <!-- Category List -->
-    <ul id="category-list" class="flex px-2 gap-2 mx-auto pt-5 max-w-4xl overflow-hidden space-x-4 lg:space-x-0 lg:flex-row">
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Student Housing</h5>
-            </a>
-        </li>
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Townhouses</h5>
-            </a>
-        </li>
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Office Buildings</h5>
-            </a>
-        </li>
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Hotels</h5>
-            </a>
-        </li>
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Apartment</h5>
-            </a>
-        </li>
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Resorts</h5>
-            </a>
-        </li>
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Restaurant</h5>
-            </a>
-        </li>
-        <li class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0">
-            <a href="#">
-                <h5 class="mb-2">Store</h5>
-            </a>
-        </li>
-    </ul>
-    <div class="lg:mr-8" style="min-width:80px;text-align:right">
-        <span>Filters</span>
-        <i class="fa-solid fa-filter"></i>
-    </div>
+        
+        <?php
+            $stmt = $conn->query("SELECT * FROM categories");
+            $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+
+        <ul id="category-list" class="flex px-2 gap-2 mx-auto pt-5 max-w-4xl overflow-hidden space-x-4 lg:space-x-0 lg:flex-row">
+            
+            <?php foreach ($categories as $cat): ?>
+                <li 
+                class="p-2 border border-gray-200 rounded-lg shadow-sm flex-shrink-0 cursor-pointer category-item" 
+                data-category-id="<?= $cat['category_id'] ?>"
+                >
+                    <h5 class="mb-2"><?= htmlspecialchars($cat['category_name']) ?></h5>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+
     </div>
 
-    <?php include 'includes/properties.php';?>
+    <div id="defaultProperties">
+        <?php include 'includes/properties.php'; ?>
+    </div>
+        <div id="searchResults" class="mt-8 max-w-screen-xl mx-auto hidden">
+            <!-- Full property cards will be inserted here -->
+        </div>
+
 </main>
 <script>
     // Reload to twice to automcatically refresh
@@ -115,6 +94,55 @@
         } else {
             localStorage.removeItem('reloadedOnce');
         }
+     
+        const searchInput = document.getElementById('searchInput');
+        const defaultProperties = document.getElementById('defaultProperties');
+        const resultsBox = document.getElementById('searchResults');
+        const categoryItems = document.querySelectorAll('.category-item');
+
+
+        searchInput.addEventListener('input', function () {
+            const query = this.value.trim();
+
+            if (query.length > 1) {
+                fetch(`./util/search.php?query=${encodeURIComponent(query)}`)
+                    .then(response => response.text())
+                    .then(html => {
+                        resultsBox.innerHTML = html;
+                        resultsBox.classList.remove('hidden');
+                        defaultProperties.classList.add('hidden');
+                    })
+                    .catch(err => {
+                        console.error('Search error:', err);
+                        resultsBox.innerHTML = '<p class="text-red-500">Something went wrong.</p>';
+                        resultsBox.classList.remove('hidden');
+                        defaultProperties.classList.add('hidden');
+                    });
+            } else {
+                resultsBox.innerHTML = '';
+                resultsBox.classList.add('hidden');
+                defaultProperties.classList.remove('hidden');
+            }
+        });
+
+        categoryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const categoryId = item.dataset.categoryId;
+                fetch(`./util/category_filter.php?category_id=${categoryId}`)
+                    .then(response => response.text())
+                    .then(html => {
+                        resultsBox.innerHTML = html;
+                        resultsBox.classList.remove('hidden');
+                        defaultProperties.classList.add('hidden');
+                    })
+                    .catch(err => {
+                        console.error('Category load error:', err);
+                        resultsBox.innerHTML = '<p class="text-red-500">Failed to load category properties.</p>';
+                        resultsBox.classList.remove('hidden');
+                        defaultProperties.classList.add('hidden');
+                    });
+            });
+        });
 </script>
 
 <?php include './partials/footer.php'; ?>

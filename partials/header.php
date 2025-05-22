@@ -48,13 +48,21 @@
                 <div class="toggle-parent"></div>
                   <div class="toggle-content hide">
                     <ul>
-                        <li class="hover:bg-sky-50 ">
-                          <i class="fa-solid fa-gear"></i> 
-                          <span>    
-                            <a class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600" href="#">
-                              Setting
-                            </a>
-                          </span>
+                        <li class="hover:bg-sky-50">
+                            <i class="fa-solid fa-list-check"></i>
+                            <span>
+                              <a class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600" href="./views/user/manage_booking_user.php">
+                                  My Bookings
+                              </a>
+                            </span>
+                        </li>
+                        <li class="hover:bg-sky-50">
+                            <i class="fa-solid fa-message"></i>                          
+                            <span>    
+                              <a class="rounded-md  px-5 py-2.5 text-sm font-medium text-slate-600" href="./views/user/messages.php">
+                                Message
+                              </a>
+                            </span>
                         <?php if(isset($_SESSION['shopname']) && !is_null($_SESSION['shopname'])): ?>
                         <li class="hover:bg-sky-50 ">
                           <i class="fa-brands fa-sellsy"></i>

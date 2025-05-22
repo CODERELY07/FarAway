@@ -16,7 +16,7 @@ $partner = $stmt->fetch();
 if (!$partner) {
     die("User not found.");
 }
-
+  
 // Handle sending new message
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['message_text'])) {
     $message_text = $_POST['message_text'];

@@ -211,14 +211,14 @@
 
                             <div class="text-center">
                                 <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer">Book Now</button>
-                                <a href="views/user/chat.php?user_id=<?php echo $_SESSION['user_id']; ?>&with_id=<?php echo $property['host_id']; ?>" class="bg-blue-600 mt-2 block hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded inline-flex items-center gap-2 shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4l16 8-16 8V4z" />
-                                    </svg>
-                                    Send Message
-                                </a>
-
-
+                                <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])):?>
+                                    <a href="views/user/chat.php?user_id=<?php echo $_SESSION['user_id']; ?>&with_id=<?php echo $property['host_id']; ?>" class="bg-blue-600 mt-2 block hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded inline-flex items-center gap-2 shadow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4l16 8-16 8V4z" />
+                                        </svg>
+                                        Send Message
+                                    </a>
+                                <?php endif;?>
                             </div>
                             
                             <div id="form-message" class="text-center mt-4 text-lg font-medium"></div>

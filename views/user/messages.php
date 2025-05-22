@@ -1,17 +1,12 @@
 <?php 
-require_once './../../connection.php';
-session_start();
-$host_id = $_SESSION['user_id'];
+    require_once './../../connection.php';
+    session_start();
+    $host_id = $_SESSION['user_id'];
 
-include './../../partials/head.php'; 
+    include './../../partials/head.php'; 
 ?>
 
 <main class="min-h-screen bg-gray-100 flex">
-    <!-- Sidebar -->
-    <div class="w-64 bg-white border-r border-gray-200">
-        <?php include './../../partials/host/dashabord_sidebar.php'; ?>
-    </div>
-
     <!-- Main content -->
     <div class="flex-1 p-6">
         <div class="max-w-4xl mx-auto bg-white rounded shadow p-6">
