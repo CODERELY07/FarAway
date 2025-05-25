@@ -16,7 +16,7 @@
   </div>
   <div class="flex w-full flex-col md:w-1/2">
     <div class="flex justify-center pt-12 md:justify-start md:pl-12">
-      <a href="./index.php" class="text-2xl font-bold text-blue-600 logo"> FarAway</a>
+      <a href="./index.php" class="text-2xl font-bold text-blue-600 logo"> Rentify</a>
     </div>
     <div class="my-auto mx-auto flex flex-col justify-center px-6 pt-8 md:justify-start lg:w-[28rem]">
       <p class="text-center text-3xl mb-4 font-bold md:text-left md:leading-tight">Create your free account</p>

@@ -5,13 +5,13 @@
     <div class="max-w-sm">
       <div class="mb-6 flex  items-center space-x-2">
         <img class=" object-contain" src="/images/logo-circle.png" alt="" />
-        <span class="text-lg logo font-medium text-blue-600">FarAway</span>
+        <span class="text-lg logo font-medium text-blue-600">Rentify</span>
       </div>
     </div>
   </div>
   <div class="border-t border-t-slate-400">
     <div class="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:px-20 lg:flex-row lg:justify-between lg:text-left xl:px-10">
-      <p class="">© 2025 FarAway | All Rights Reserved</p>
+      <p class="">© 2025 Rentify | All Rights Reserved</p>
       <p class="">
         <a class="" href="#">Privacy Policy</a>
         <span>|</span>

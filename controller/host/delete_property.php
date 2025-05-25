@@ -6,6 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $property_id = $_POST['property_id'];
     
     try {
+        // First, delete related rows from history
+        $stmt = $conn->prepare("DELETE FROM history WHERE property_id = :property_id");
+        $stmt->bindParam(':property_id', $property_id, PDO::PARAM_INT);
+        $stmt->execute();
+
         // First, delete related photos from the property_photos table
         $stmt = $conn->prepare("DELETE FROM property_photos WHERE property_id = :property_id");
         $stmt->bindParam(':property_id', $property_id, PDO::PARAM_INT);

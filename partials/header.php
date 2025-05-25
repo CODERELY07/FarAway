@@ -6,7 +6,7 @@ session_start();?>
       <div class="md:flex md:items-center md:gap-12">
         <a class="block text-teal-600" href="#">
           <span class="sr-only">Home</span>
-           <h1 class="logo text-blue-500">FarAway</h1>
+           <h1 class="logo text-blue-500">Rentify</h1>
         </a>
       </div>
 

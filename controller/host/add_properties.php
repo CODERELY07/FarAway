@@ -1,7 +1,7 @@
 <?php
 // Include database connection
-require_once './../../connection.php';
-session_start();
+
+
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

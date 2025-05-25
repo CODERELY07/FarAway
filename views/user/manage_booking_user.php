@@ -98,7 +98,7 @@ $history = $stmt2->fetchAll(PDO::FETCH_ASSOC);
     <div class="md:flex md:items-center md:gap-12">
     <a class="block text-teal-600" href="./../../index.php">
         <span class="sr-only">Home</span>
-        <h1 class="logo text-blue-500">FarAway</h1>
+        <h1 class="logo text-blue-500">Rentify</h1>
     </a>
     </div>
     <h3 class="text-2xl mt-10 font-bold mb-6">My Bookings</h3>
