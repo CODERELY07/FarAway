@@ -310,6 +310,7 @@ $(document).ready(function() {
                 data: formData,
                 contentType: false, 
                 processData: false, 
+                
                 success: function (response) {
                     try {
                         var result = JSON.parse(response);
